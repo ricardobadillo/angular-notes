@@ -1,0 +1,13 @@
+.container {
+    margin: 2rem;
+}
+
+.button {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
+    * {
+        margin: 1rem 0rem;
+    }
+}

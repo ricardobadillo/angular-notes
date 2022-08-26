@@ -1,0 +1,35 @@
+.container {
+    background-color: lightblue;
+    padding: 1rem;
+}
+
+.div-scroll {
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+        flex-basis: 50%;
+    }
+}
+
+.message-scroll {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll {
+    height: 75px;
+    overflow: auto;
+    width: 500px;
+
+}
+
+.keyboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    width: 100%;
+}

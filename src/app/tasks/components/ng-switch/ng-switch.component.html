@@ -1,0 +1,10 @@
+<div [ngSwitch]="numberSwitch">
+    <button (click)="sum()">Sumar</button>
+
+    <p [style.margin.top]="10" [style.margin.bottom]="10"> {{ numberSwitch }} </p>
+
+    <p *ngSwitchCase="10">Estás en el tope.</p>
+    <p *ngSwitchCase="12">Te has pasado algo.</p>
+    <p *ngSwitchCase="15">Te has pasado mucho.</p>
+    <p *ngSwitchCase="20">Te has pasado demasiado.</p>
+</div>
