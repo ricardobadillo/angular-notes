@@ -1,0 +1,25 @@
+.container {
+    margin: 3rem;
+}
+
+.red { background-color: red; }
+
+.blue { background-color: blue; }
+
+.green { background-color: green; }
+
+.yellow { background-color: yellow; }
+
+.someStyle {
+    text-decoration: underline;
+}
+
+.container-style {
+    display: flex;
+    justify-content: space-between;
+    
+    p {
+        flex-basis: 50%;
+        margin: 2rem 1rem;
+    }
+}

@@ -1,0 +1,13 @@
+<div>
+    <input class="input-name" type="text" [placeholder]="placeholder" [(ngModel)]="nombre">
+    <h1> {{ "Hola mundo".split(" ")[0] }} {{ nombre}} </h1>
+</div>
+
+<hr>
+
+<div>
+    <p>Una hora: {{ (convertStringToNumber("14:00".split(":")[0]) > 12) ?
+                    (convertStringToNumber("14:00".split(":")[0]) - 12) : 
+                    (convertStringToNumber("14:00".split(":")[0])) }}
+    </p>
+</div>
