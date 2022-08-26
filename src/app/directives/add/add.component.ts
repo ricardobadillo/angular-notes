@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add',
@@ -12,11 +12,11 @@ export class AddComponent {
   color: string = 'pink';
   message: string = 'Debe ingresar este campo';
 
-  miFormulario: FormGroup = this.fb.group({
+  miFormulario: UntypedFormGroup = this.fb.group({
     nombre: ['', Validators.required]
   });
 
-  constructor( private fb: FormBuilder ) { }
+  constructor( private fb: UntypedFormBuilder ) { }
 
   ngOnInit(): void {
   }
