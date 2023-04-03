@@ -1,12 +1,10 @@
+// Angular.
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 
+
 const routes: Routes = [
-  {
-    path: 'tasks',
-    loadChildren: () => import('./tasks/tasks-routing.module').then(m => m.TasksRoutingModule)
-  },
   {
     path: 'directives',
     loadChildren: () => import('./directives/directives.module').then(m => m.DirectivesModule)
@@ -16,13 +14,18 @@ const routes: Routes = [
     loadChildren: () => import('./rxjs/rxjs.module').then(m => m.RxjsModule)
   },
   {
-    path: '**',
-    redirectTo: 'tasks'
-  }
+    path: 'tasks',
+    loadChildren: () => import('./tasks/tasks-routing.module').then(m => m.TasksRoutingModule)
+  },
+  {
+    path: 'testing',
+    loadChildren: () => import('./testing/testing.module').then(m => m.TestingModule)
+  },
+  { path: '**', redirectTo: 'tasks' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
 })
 export class AppRoutingModule { }

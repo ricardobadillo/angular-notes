@@ -1,24 +1,29 @@
+// Angular.
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+// Componentes.
 import { AppComponent } from './app.component';
-import { TasksModule } from './tasks/tasks.module';
+
+// Interceptors.
 import { TimeInterceptor } from './rxjs/interceptor/time.interceptor';
+
+// Módulos.
+import { AppRoutingModule } from './app-routing.module';
+import { TasksModule } from './tasks/tasks.module';
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [ AppComponent ],
   imports: [
-    AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
+
+    AppRoutingModule,
     TasksModule
   ],
   providers: [
@@ -28,6 +33,6 @@ import { TimeInterceptor } from './rxjs/interceptor/time.interceptor';
       multi: true 
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

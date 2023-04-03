@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SwiperOptions } from 'swiper';
 
 import { Ninja, Type, NinjaDTO } from './interfaces/ninja';
 import { NinjasService } from './services/ninjas.service';
@@ -86,13 +85,6 @@ export class RxjsComponent implements OnInit {
       this.ninjas = this.ninjas.concat(data);
       this.offset += this.limit;
     });
-  }
-
-  config: SwiperOptions = {
-    slidesPerView: 3,
-    direction: 'horizontal',
-    pagination: { clickable: true },
-    scrollbar: { draggable: true },
   }
 
   onSwiper(swiper: any) {

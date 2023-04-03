@@ -22,15 +22,11 @@
 </div>
 
 <div *ngIf="ninjas">
-    <swiper
-        [config]="config"
-        (swiper)="onSwiper($event)"
-        (slideChange)="onSlideChange()"
-    >
+    <div>
         <ng-template swiperSlide *ngFor="let ninja of arrayFake">
             <img [src]="ninja" style="width: 100%">
         </ng-template>
-    </swiper>
+    </div>
 </div>
 
 <div class="ninja-detail" [class.active]="showNinjaDetail" *ngIf="ninjaSelected">

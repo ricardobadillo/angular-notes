@@ -1,11 +1,11 @@
 <div class="container">
-    <h1 class="mt-5">Agregar nombre </h1>
+    <h1 class="mt-5"> Agregar nombre </h1>
     <hr>
     
     <form [formGroup]="miFormulario">
-        <div class="row g-3 align-items-center mb-3">
+        <div class="align-items-center mb-3 row g-3">
             <div class="col-auto">
-                <label class="col-form-label">Nombre:</label>
+                <label class="col-form-label"> Nombre </label>
             </div>
     
             <div class="col-auto">
@@ -14,8 +14,8 @@
     
             <div class="col-auto">
                 <span
-                    error-message
                     class="form-text"
+                    error-message
                     [color]="color"
                     [message]="message"
                     [valid]="!existError('nombre')">

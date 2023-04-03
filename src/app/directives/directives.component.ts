@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+// Angular.
+import { Component } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-directives',
   templateUrl: './directives.component.html',
   styleUrls: ['./directives.component.scss']
 })
-export class DirectivesComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class DirectivesComponent { }
