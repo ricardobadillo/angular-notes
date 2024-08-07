@@ -3,7 +3,6 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-getters-and-setters',
   templateUrl: './getters-and-setters.component.html',
-  styleUrls: ['./getters-and-setters.component.scss'],
 })
 export class GettersAndSettersComponent {
   private _name!: string;
@@ -14,7 +13,8 @@ export class GettersAndSettersComponent {
     return this._name;
   }
 
-  @Input() public set name(name: string) {
+  @Input()
+  public set name(name: string) {
     this._name = name;
 
     if (name == 'Ricardo') {
@@ -28,17 +28,16 @@ export class GettersAndSettersComponent {
     return this._age;
   }
 
-  @Input() public set age(age: number) {
+  @Input()
+  public set age(age: number) {
     this._age = age;
   }
 
-  constructor() {}
-
-  onRicardo() {
+  public onRicardo(): void {
     this.name = 'Ricardo';
   }
 
-  onJavier() {
+  public onJavier(): void {
     this.name = 'Javier';
   }
 }

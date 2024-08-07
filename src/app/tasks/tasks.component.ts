@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./tasks.component.scss'],
 })
 export class TasksComponent {
-  list: string[] = ['Uno', 'Dos', 'Tres'];
+  public list: Array<string> = ['Uno', 'Dos', 'Tres'];
 
-  constructor() {}
-
-  addItemList(item: string) {
+  public addItemList(item: string): void {
     this.list.push(item);
   }
 }

@@ -1,18 +1,14 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-view-child',
   templateUrl: './view-child.component.html',
-  styleUrls: ['./view-child.component.scss'],
 })
-export class ViewChildComponent implements OnInit {
-  @ViewChild('input') input!: ElementRef;
+export class ViewChildComponent {
+  @ViewChild('input')
+  public input?: ElementRef;
 
-  constructor() {}
-
-  ngOnInit(): void {}
-
-  enter() {
-    console.log(this.input);
+  public enter(): void {
+    console.log(this.input?.nativeElement);
   }
 }

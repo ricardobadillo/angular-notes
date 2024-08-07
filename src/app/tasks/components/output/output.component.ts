@@ -1,18 +1,14 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-output',
   templateUrl: './output.component.html',
-  styleUrls: ['./output.component.scss'],
 })
-export class OutputComponent implements OnInit {
-  @Output() onOutput = new EventEmitter<string>();
+export class OutputComponent {
+  @Output()
+  public onOutput = new EventEmitter<string>();
 
-  constructor() {}
-
-  ngOnInit(): void {}
-
-  eventAddItem(item: string) {
+  public eventAddItem(item: string): void {
     this.onOutput.emit(item);
   }
 }

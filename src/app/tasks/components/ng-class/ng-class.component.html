@@ -4,7 +4,8 @@
   <h1 [ngClass]="{ someStyle: true }">NgClass</h1>
   <hr />
 
-  <button (click)="changeNgClass()">Cambiar color con NgClass</button>
+  <button (click)="increment()">Incrementar (cambiar color) con NgClass</button>
+
   <div class="container-style">
     <p [ngClass]="{ red: numberProperty == 0, blue: numberProperty == 2, green: numberProperty == 5 }">
       {{ numberProperty }}

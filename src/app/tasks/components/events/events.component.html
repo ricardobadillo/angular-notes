@@ -79,10 +79,10 @@
   <div>
     <div style="margin-bottom: 2rem">
       <p>Evento Load, Error y Keyup.enter</p>
-      <input [(ngModel)]="imgLink" (keyup.enter)="onKeyupEnter()" class="input" type="text" />
+      <input [(ngModel)]="image" (keyup.enter)="onKeyupEnter()" class="input" type="text" />
     </div>
 
-    <img [src]="imgLink" [style.width.px]="50" [style.height.px]="50" (load)="onLoad()" (error)="onError($event)" />
+    <img [src]="image" [style.width.px]="50" [style.height.px]="50" (load)="onLoad()" (error)="onError($event)" />
   </div>
 
   <hr />

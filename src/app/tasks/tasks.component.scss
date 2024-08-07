@@ -3,11 +3,12 @@
   padding: 1rem;
 }
 
-.list {
+ul {
   display: flex;
+  gap: 0.5rem;
+  padding: 0;
+}
 
-  li {
-    list-style: none;
-    margin-right: 1rem;
-  }
+li {
+  list-style: none;
 }

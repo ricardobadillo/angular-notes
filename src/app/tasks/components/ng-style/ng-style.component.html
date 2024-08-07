@@ -11,14 +11,10 @@
 
 <hr />
 
-<button
-  [ngStyle]="{ 'background-color': 'blue', border: 0, color: '#FFFFFF', padding: '10px' }"
-  (click)="changeClass()">
+<button [ngStyle]="{ 'background-color': 'blue', border: 0, color: '#FFFFFF' }" (click)="changeClass()">
   Cambiar color con class.active
 </button>
 
-<div [style.margin-top.px]="10" [style.margin-bottom.px]="10" class="classActive" [class.active]="propertyClass">
+<div class="classActive" [class.active]="propertyClass">
   {{ propertyClass ? 'class.active' : 'class.inactive' }}
 </div>
-
-<hr />

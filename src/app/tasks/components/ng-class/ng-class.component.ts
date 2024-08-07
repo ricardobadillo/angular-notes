@@ -6,23 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./ng-class.component.scss'],
 })
 export class NgClassComponent {
-  numberProperty: number = 0;
+  public numberProperty: number = 0;
 
-  constructor() {}
-
-  changeNgClass() {
+  public increment(): void {
     this.numberProperty++;
   }
 
-  getClass(num: number) {
-    if (num == 1) {
-      return 'green';
-    } else if (num == 3) {
-      return 'blue';
-    } else if (num == 5) {
-      return 'red';
-    } else {
-      return 'yellow';
-    }
+  getClass(counter: number): 'green' | 'blue' | 'red' | 'yellow' {
+    return counter == 1 ? 'green' : counter == 3 ? 'blue' : counter == 5 ? 'red' : 'yellow';
   }
 }

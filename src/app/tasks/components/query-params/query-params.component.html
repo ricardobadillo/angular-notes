@@ -2,9 +2,13 @@
   <h1>Query Params</h1>
   <hr />
 
-  <input [(ngModel)]="inputText" (keyup.enter)="sendText(inputText)" placeholder="Escribe algo..." />
+  <input
+    placeholder="Escribe algo para llamar el evento keyup.enter..."
+    style="width: 100%"
+    [(ngModel)]="inputText"
+    (keyup.enter)="sendText(inputText)" />
 
-  <div style="display: flex; justify-content: space-between; margin-top: 1rem">
+  <div style="display: flex; justify-content: space-between; margin: 1rem 0rem">
     <button (click)="onOtherPage()">Other page component</button>
 
     <button (click)="onPageParams(inputText)">Page params</button>
@@ -16,5 +20,5 @@
     <button (click)="onPage()">Page component</button>
   </div>
 
-  <p *ngIf="error" style="margin: 3rem 0rem">{{ errorText }}</p>
+  <p *ngIf="error">{{ errorText }}</p>
 </div>

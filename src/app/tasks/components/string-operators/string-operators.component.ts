@@ -3,15 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-string-operators',
   templateUrl: './string-operators.component.html',
-  styleUrls: ['./string-operators.component.scss'],
 })
 export class StringOperatorsComponent {
-  placeholder: string = 'Escribe tu nombre...';
-  nombre: string = '';
+  public nombre = '';
+  public placeholder = 'Escribe tu nombre...';
 
-  constructor() {}
-
-  convertStringToNumber(time: string) {
+  public convertStringToNumber(time: string): number {
     return parseInt(time);
   }
 }

@@ -6,16 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./ng-style.component.scss'],
 })
 export class NgStyleComponent {
-  property: boolean = false;
-  propertyClass: boolean = false;
+  public property = false;
+  public propertyClass = false;
 
-  constructor() {}
-
-  changeStyle() {
+  public changeStyle(): void {
     this.property = !this.property;
   }
 
-  changeClass() {
+  public changeClass(): void {
     this.propertyClass = !this.propertyClass;
   }
 }

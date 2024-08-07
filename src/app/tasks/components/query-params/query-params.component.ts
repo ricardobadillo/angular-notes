@@ -4,40 +4,39 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-query-params',
   templateUrl: './query-params.component.html',
-  styleUrls: ['./query-params.component.scss'],
 })
 export class QueryParamsComponent {
-  inputText: string = '';
-  error: boolean = false;
-  errorText: string = 'Error - Sin parámetro';
+  public error = false;
+  public errorText = 'Error - Sin parámetro al usar el botón de "Other page component" / "Page params".';
+  public inputText = '';
 
   constructor(private router: Router) {}
 
-  sendText(text: string) {
-    console.log(text);
+  public sendText(text: string): void {
+    alert(text);
   }
 
-  onPage() {
-    this.router.navigate(['tasks/page'], {
+  public onOtherPage(): void {
+    if (!this.inputText) {
+      this.error = true;
+      return;
+    }
+
+    this.router.navigate(['tasks/other-page']);
+  }
+
+  public onPageParams(path: string): void {
+    if (!this.inputText) {
+      this.error = true;
+      return;
+    }
+
+    this.router.navigate(['tasks/page-params/', path]);
+  }
+
+  public onPage(): void {
+    this.router.navigate(['tasks/any-page'], {
       queryParams: { name: 'Ricardo', last_name: 'Badillo', params: 'Desde TypeScript' },
     });
-  }
-
-  onPageParams(link: string) {
-    if (!this.inputText) {
-      this.error = true;
-      return;
-    }
-
-    this.router.navigate(['tasks/page-params/', link]);
-  }
-
-  onOtherPage() {
-    if (!this.inputText) {
-      this.error = true;
-      return;
-    }
-
-    // this.router.navigate(['tasks/other-page']);
   }
 }

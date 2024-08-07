@@ -6,59 +6,57 @@ import { Component } from '@angular/core';
   styleUrls: ['./events.component.scss'],
 })
 export class EventsComponent {
-  inputValueBlur: string = '';
-  inputValueFocus: string = '';
-  messageScroll: string = '';
-  imgLink: string = 'https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png';
+  public image = 'https://images.pexels.com/photos/2014422/pexels-photo-2014422.jpeg';
+  public inputValueBlur = '';
+  public inputValueFocus = '';
+  public messageScroll = '';
 
-  constructor() {}
-
-  onClick() {
+  public onClick(): void {
     console.log('Has clickeado');
   }
 
-  onDoubleClick() {
+  public onDoubleClick(): void {
     console.log('Has clickeado dos veces');
   }
 
-  onBlur() {
+  public onBlur(): void {
     this.inputValueBlur = 'Has hecho blur';
   }
 
-  onFocus() {
+  public onFocus(): void {
     this.inputValueFocus = 'Has hecho focus';
   }
 
-  onScroll() {
+  public onScroll(): void {
     console.log('Has hecho scroll');
     this.messageScroll = 'Has hecho scroll';
   }
 
-  onCut() {
+  public onCut(): void {
     console.log('Has cortado un texto');
   }
 
-  onCopy() {
+  public onCopy(): void {
     console.log('Has copiado un texto');
   }
 
-  onPaste() {
+  public onPaste(): void {
     console.log('Has pegado un texto');
   }
 
-  onKeyUp(event: KeyboardEvent) {
+  public onKeyUp(event: KeyboardEvent) {
     console.log(event.key);
   }
 
-  onLoad() {
+  public onLoad(): void {
     console.log('Algo se ha cargado');
   }
 
-  onError(event: Event) {
+  public onError(event: Event) {
     console.log('Algo ha fallado');
   }
 
-  onKeyupEnter() {
-    this.imgLink = 'assets/images/default.jpg';
+  public onKeyupEnter(): void {
+    this.image = 'assets/images/default.jpg';
   }
 }

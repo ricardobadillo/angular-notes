@@ -1,12 +1,12 @@
 <div>
-  <button (click)="onRicardo()">Ricardo</button>
-
-  <button (click)="onJavier()">Javier</button>
-
-  <p>{{ message }}</p>
+  <div style="display: flex; gap: 1rem">
+    <button (click)="onRicardo()">Ricardo</button>
+    <button (click)="onJavier()">Javier</button>
+  </div>
 </div>
 
-<div>
-  <p>{{ name }}</p>
-  <p>{{ age }}</p>
+<div style="display: grid; gap: 1rem; margin-top: 1rem">
+  <p style="margin: 0">{{ message }}</p>
+  <p style="margin: 0">{{ name }}</p>
+  <p style="margin: 0">{{ age }}</p>
 </div>
