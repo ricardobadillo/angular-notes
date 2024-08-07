@@ -6,11 +6,11 @@ import { RxjsComponent } from './rxjs.component';
 
 const routes: Routes = [
   { path: '', component: RxjsComponent },
-  { path: 'download', component: DownloadComponent }
+  { path: 'download', component: DownloadComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class RxjsRoutingModule { }
+export class RxjsRoutingModule {}

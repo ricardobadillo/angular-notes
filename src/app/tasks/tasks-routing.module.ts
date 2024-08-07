@@ -15,65 +15,63 @@ import { PageComponent } from './components/query-params/components/page/page.co
 import { OtherPageComponent } from './components/query-params/components/other-page/other-page.component';
 import { PageParamsComponent } from './components/query-params/components/page-params/page-params.component';
 
-
-
 const routes: Routes = [
   {
     path: '',
-    component: TasksComponent
+    component: TasksComponent,
   },
   {
     path: 'events',
-    component: EventsComponent
+    component: EventsComponent,
   },
   {
     path: 'getters-and-setters',
-    component: GettersAndSettersComponent
+    component: GettersAndSettersComponent,
   },
   {
     path: 'ng-class',
-    component: NgClassComponent
+    component: NgClassComponent,
   },
   {
     path: 'ng-style',
-    component: NgStyleComponent
+    component: NgStyleComponent,
   },
   {
     path: 'ng-switch',
-    component: NgSwitchComponent
+    component: NgSwitchComponent,
   },
   {
     path: 'output',
-    component: OutputComponent
+    component: OutputComponent,
   },
   {
     path: 'other-page',
-    component: OtherPageComponent
+    component: OtherPageComponent,
   },
   {
     path: 'page',
-    component: PageComponent
+    component: PageComponent,
   },
   {
     path: 'page-params/:id',
-    component: PageParamsComponent
+    component: PageParamsComponent,
   },
   {
     path: 'query-params',
-    component: QueryParamsComponent
+    component: QueryParamsComponent,
   },
   {
     path: 'string-operators',
-    component: StringOperatorsComponent
+    component: StringOperatorsComponent,
   },
   {
     path: 'view-child',
-    component: ViewChildComponent
+    component: ViewChildComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class TasksRoutingModule { }
+export class TasksRoutingModule {}

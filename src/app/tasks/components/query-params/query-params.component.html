@@ -1,18 +1,20 @@
 <div class="container">
-    <h1>Query Params</h1>
-    <hr>
+  <h1>Query Params</h1>
+  <hr />
 
-    <input [(ngModel)]="inputText" (keyup.enter)="sendText(inputText)" placeholder="Escribe algo...">
+  <input [(ngModel)]="inputText" (keyup.enter)="sendText(inputText)" placeholder="Escribe algo..." />
 
-    <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
-        <button (click)="onOtherPage()"> Other page component </button>
+  <div style="display: flex; justify-content: space-between; margin-top: 1rem">
+    <button (click)="onOtherPage()">Other page component</button>
 
-        <button (click)="onPageParams(inputText)"> Page params </button>
+    <button (click)="onPageParams(inputText)">Page params</button>
 
-        <button routerLink="/tasks/page" [queryParams]="{ name: 'Ricardo', last_name: 'Badillo', params: 'Desde HTML' }"> Query Params </button>
+    <button routerLink="/tasks/page" [queryParams]="{ name: 'Ricardo', last_name: 'Badillo', params: 'Desde HTML' }">
+      Query Params
+    </button>
 
-        <button (click)="onPage()"> Page component </button>
-    </div>
+    <button (click)="onPage()">Page component</button>
+  </div>
 
-    <p *ngIf="error" style="margin: 3rem 0rem;"> {{ errorText }} </p>
+  <p *ngIf="error" style="margin: 3rem 0rem">{{ errorText }}</p>
 </div>

@@ -1,8 +1,6 @@
 // Servicios.
 import { ExampleService } from './example.service';
 
-
-
 fdescribe('ExampleService', () => {
   let service: ExampleService;
 
@@ -38,8 +36,8 @@ fdescribe('ExampleService', () => {
   describe('Tests para getObservableValue()', async () => {
     it('Debe retornar el valor servido desde un observable', async () => {
       let value: string;
-  
-      service.getObservableValue().subscribe(data => {
+
+      service.getObservableValue().subscribe((data) => {
         expect(data).toBe('Valor de un observable');
       });
     });

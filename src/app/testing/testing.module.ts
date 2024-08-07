@@ -8,13 +8,8 @@ import { TestingComponent } from './testing.component';
 // Módulos.
 import { TestingRoutingModule } from './testing-routing.module';
 
-
-
 @NgModule({
-  declarations: [ TestingComponent ],
-  imports: [
-    CommonModule,
-    TestingRoutingModule
-  ]
+  declarations: [TestingComponent],
+  imports: [CommonModule, TestingRoutingModule],
 })
-export class TestingModule { }
+export class TestingModule {}

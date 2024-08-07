@@ -1,0 +1,37 @@
+# Carpetas de dependencias y construcción
+node_modules/
+dist/
+build/
+coverage/
+
+# Archivos y carpetas de configuración
+.angular.json
+tsconfig*.json
+package.json
+package-lock.json
+yarn.lock
+.stylelintrc.js
+.prettierrc
+.gitlab-ci.yml
+
+# Archivos generados o de código
+**/*.js
+**/*.d.ts
+**/*.md
+**/*.svg
+# **/*.html
+src/index.html
+**/test.ts
+
+# Carpetas específicas de Angular y plantillas
+**/e2e
+src/app/routes/gen/
+src/templates/
+schematics/**/files/
+
+# Archivos y carpetas de temas
+packages/theme/system/mixins/_freak.less
+packages/theme/system/mixins/_functions.less
+theme-default.less
+theme-dark.less
+theme-compact.less

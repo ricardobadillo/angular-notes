@@ -3,13 +3,11 @@ import { ExampleService } from './example.service';
 import { FakeService } from './fake.service';
 import { MasterService } from './master.service';
 
-
-
 fdescribe('MasterService', () => {
   it('Debe de retornar "Mi valor" desde el Example Service', () => {
     let exampleService = new ExampleService();
     let masterService = new MasterService(exampleService);
-    
+
     expect(masterService.getValue()).toBe('Mi valor');
   });
 

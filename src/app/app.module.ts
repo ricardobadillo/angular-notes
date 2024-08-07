@@ -14,25 +14,16 @@ import { TimeInterceptor } from './rxjs/interceptor/time.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { TasksModule } from './tasks/tasks.module';
 
-
-
 @NgModule({
-  declarations: [ AppComponent ],
-  imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    HttpClientModule,
-
-    AppRoutingModule,
-    TasksModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserAnimationsModule, BrowserModule, HttpClientModule, AppRoutingModule, TasksModule],
   providers: [
-    { 
-      provide: HTTP_INTERCEPTORS, 
-      useClass: TimeInterceptor, 
-      multi: true 
-    }
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TimeInterceptor,
+      multi: true,
+    },
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

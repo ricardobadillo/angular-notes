@@ -3,13 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-ng-class',
   templateUrl: './ng-class.component.html',
-  styleUrls: ['./ng-class.component.scss']
+  styleUrls: ['./ng-class.component.scss'],
 })
 export class NgClassComponent {
-
   numberProperty: number = 0;
 
-  constructor() { }
+  constructor() {}
 
   changeNgClass() {
     this.numberProperty++;

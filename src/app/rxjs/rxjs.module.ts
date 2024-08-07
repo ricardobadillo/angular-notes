@@ -7,17 +7,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NinjaComponent } from './components/ninja/ninja.component';
 import { DownloadComponent } from './components/download/download.component';
 
-
 @NgModule({
-  declarations: [
-    RxjsComponent,
-    NavbarComponent,
-    NinjaComponent,
-    DownloadComponent
-  ],
-  imports: [
-    CommonModule,
-    RxjsRoutingModule,
-  ]
+  declarations: [RxjsComponent, NavbarComponent, NinjaComponent, DownloadComponent],
+  imports: [CommonModule, RxjsRoutingModule],
 })
-export class RxjsModule { }
+export class RxjsModule {}

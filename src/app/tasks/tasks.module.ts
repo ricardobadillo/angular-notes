@@ -17,7 +17,6 @@ import { OtherPageComponent } from './components/query-params/components/other-p
 import { PageComponent } from './components/query-params/components/page/page.component';
 import { PageParamsComponent } from './components/query-params/components/page-params/page-params.component';
 
-
 @NgModule({
   declarations: [
     NgClassComponent,
@@ -34,10 +33,6 @@ import { PageParamsComponent } from './components/query-params/components/page-p
     PageComponent,
     PageParamsComponent,
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    TasksRoutingModule,
-  ]
+  imports: [CommonModule, FormsModule, TasksRoutingModule],
 })
-export class TasksModule { }
+export class TasksModule {}

@@ -5,14 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 // Componentes.
 import { TestingComponent } from './testing.component';
 
-
-
-const routes: Routes = [
-  { path: '', component: TestingComponent }
-];
+const routes: Routes = [{ path: '', component: TestingComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class TestingRoutingModule { }
+export class TestingRoutingModule {}

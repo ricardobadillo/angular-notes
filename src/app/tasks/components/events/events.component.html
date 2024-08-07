@@ -1,97 +1,91 @@
 <div class="container">
-    <h1>Eventos de Angular</h1>
+  <h1>Eventos de Angular</h1>
 
-    <div>
-        <p>Evento Click</p>
-        <button (click)="onClick()">Click</button>
+  <div>
+    <p>Evento Click</p>
+    <button (click)="onClick()">Click</button>
+  </div>
+
+  <hr />
+
+  <div>
+    <p>Evento Doble click</p>
+    <button (dblclick)="onDoubleClick()">Click</button>
+  </div>
+
+  <hr />
+
+  <div>
+    <p>Evento Blur</p>
+    <input type="text" [value]="inputValueBlur" (blur)="onBlur()" />
+  </div>
+
+  <hr />
+
+  <div>
+    <p>Evento Focus</p>
+    <input type="text" [value]="inputValueFocus" (focus)="onFocus()" />
+  </div>
+
+  <hr />
+
+  <div class="div-scroll">
+    <div class="scroll" (scroll)="onScroll()">
+      <p>Evento Scroll</p>
+
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus placeat quas velit harum iusto eligendi
+        optio id, voluptas sequi ipsam vitae excepturi porro? Deleniti, deserunt doloribus similique repellendus culpa
+        error?
+      </p>
     </div>
 
-    <hr>
+    <div class="message-scroll">
+      <p>{{ messageScroll }}</p>
+    </div>
+  </div>
 
-    <div>
-        <p>Evento Doble click</p>
-        <button (dblclick)="onDoubleClick()">Click</button>
+  <hr />
+
+  <div class="keyboard">
+    <div (cut)="onCut()">
+      <p>Evento Cut</p>
+
+      <textarea style="resize: none" cols="25" rows="5">Algo de texto</textarea>
     </div>
 
-    <hr>
+    <div (copy)="onCopy()">
+      <p>Evento Copy</p>
 
-    <div>
-        <p>Evento Blur</p>
-        <input type="text" [value]="inputValueBlur" (blur)="onBlur()">
+      <textarea style="resize: none" cols="25" rows="5">Algo de texto</textarea>
     </div>
 
-    <hr>
+    <div (paste)="onPaste()">
+      <p>Evento Paste</p>
 
-    <div>
-        <p>Evento Focus</p>
-        <input type="text" [value]="inputValueFocus" (focus)="onFocus()">
+      <textarea style="resize: none" cols="25" rows="5">Algo de texto</textarea>
+    </div>
+  </div>
+
+  <hr />
+
+  <div>
+    <p>Evento Keyup</p>
+    <input type="text" (keyup)="onKeyUp($event)" />
+  </div>
+
+  <hr />
+
+  <div>
+    <div style="margin-bottom: 2rem">
+      <p>Evento Load, Error y Keyup.enter</p>
+      <input [(ngModel)]="imgLink" (keyup.enter)="onKeyupEnter()" class="input" type="text" />
     </div>
 
-    <hr>
+    <img [src]="imgLink" [style.width.px]="50" [style.height.px]="50" (load)="onLoad()" (error)="onError($event)" />
+  </div>
 
-    <div class="div-scroll">
-        <div class="scroll" (scroll)="onScroll()">
-            <p>Evento Scroll</p>
-            
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus placeat quas velit harum iusto eligendi optio id, voluptas sequi ipsam vitae excepturi porro? Deleniti, deserunt doloribus similique repellendus culpa error?
-            </p>
-        </div>
+  <hr />
 
-        <div class="message-scroll">
-            <p> {{ messageScroll }} </p>
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="keyboard">
-        <div (cut)="onCut()">
-            <p>Evento Cut</p>
-    
-            <textarea style="resize: none;" cols="25" rows="5">Algo de texto</textarea>
-        </div>
-
-        <div (copy)="onCopy()">
-            <p>Evento Copy</p>
-    
-            <textarea style="resize: none;" cols="25" rows="5">Algo de texto</textarea>
-        </div>
-
-        <div (paste)="onPaste()">
-            <p>Evento Paste</p>
-    
-            <textarea style="resize: none;" cols="25" rows="5">Algo de texto</textarea>
-        </div>
-    </div>
-
-    <hr>
-
-    <div>
-        <p>Evento Keyup</p>
-        <input type="text" (keyup)="onKeyUp($event)">
-    </div>
-
-    <hr>
-
-    <div>
-        <div style="margin-bottom: 2rem;">
-            <p>Evento Load, Error y Keyup.enter</p>
-            <input [(ngModel)]="imgLink" (keyup.enter)="onKeyupEnter()" class="input" type="text">
-        </div>
-
-        <img 
-            [src]="imgLink"
-            [style.width.px]="50" 
-            [style.height.px]="50"
-            (load)="onLoad()"
-            (error)="onError($event)" 
-        >
-    </div>
-
-    <hr>
-
-    <div>
-
-    </div>
+  <div></div>
 </div>

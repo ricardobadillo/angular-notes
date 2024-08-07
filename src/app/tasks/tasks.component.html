@@ -1,21 +1,16 @@
 <div class="container">
-    <h1> Página principal | Componente padre </h1>
-    <hr>
-    <app-output (onOutput)="addItemList($event)"></app-output>
+  <h1>Página principal | Componente padre</h1>
+  <hr />
+  <app-output (onOutput)="addItemList($event)"></app-output>
 
-    <ul class="list">
-        <li *ngFor="let item of list"> {{ item }} </li>
-    </ul>
+  <ul class="list">
+    <li *ngFor="let item of list">{{ item }}</li>
+  </ul>
 </div>
 
-<hr>
+<hr />
 
 <div class="container">
-    <h1> Getters and Setters </h1>
-    <app-getters-and-setters
-        [name]="'Ricardo'"
-        [age]="20"
-    >
-
-    </app-getters-and-setters>
+  <h1>Getters and Setters</h1>
+  <app-getters-and-setters [name]="'Ricardo'" [age]="20"> </app-getters-and-setters>
 </div>

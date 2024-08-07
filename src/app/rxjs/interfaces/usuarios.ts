@@ -1,4 +1,4 @@
 export interface Usuario {
-    id: number;
-    image: string;
+  id: number;
+  image: string;
 }

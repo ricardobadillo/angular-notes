@@ -1,14 +1,13 @@
 export class FakeService {
-
-  constructor() { }
+  constructor() {}
 
   getValue(): string {
-    return "Fake value";
-  };
+    return 'Fake value';
+  }
 
-  setValue(value: string): void { };
+  setValue(value: string): void {}
 
   getPromiseValue(): Promise<string> {
     return Promise.resolve('Valor fake en promesa');
-  };
+  }
 }

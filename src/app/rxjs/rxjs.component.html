@@ -1,38 +1,37 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-    <h1> RXJS | Prácticas </h1>
-    <hr>
+  <h1>RXJS | Prácticas</h1>
+  <hr />
 
-    <button (click)="createNinja()">Crea un ninja</button>
+  <button (click)="createNinja()">Crea un ninja</button>
 
-    <div>
-        <app-ninja
-            class="ninja"
-            [ninja]="ninja"
-            *ngFor="let ninja of ninjas; let i = index;"
-            (addNinjaEvent)="addNinja($event)"
-            (editNinjaEvent)="editNinja($event)"
-            (deleteNinjaEvent)="deleteNinja($event)"
-            (ninjaDetailEvent)="showDetailNinja($event)"
-        ></app-ninja>
-    </div>
+  <div>
+    <app-ninja
+      class="ninja"
+      [ninja]="ninja"
+      *ngFor="let ninja of ninjas; let i = index"
+      (addNinjaEvent)="addNinja($event)"
+      (editNinjaEvent)="editNinja($event)"
+      (deleteNinjaEvent)="deleteNinja($event)"
+      (ninjaDetailEvent)="showDetailNinja($event)"></app-ninja>
+  </div>
 
-    <button (click)="loadMore()">Cargar más</button>
+  <button (click)="loadMore()">Cargar más</button>
 </div>
 
 <div *ngIf="ninjas">
-    <div>
-        <ng-template swiperSlide *ngFor="let ninja of arrayFake">
-            <img [src]="ninja" style="width: 100%">
-        </ng-template>
-    </div>
+  <div>
+    <ng-template swiperSlide *ngFor="let ninja of arrayFake">
+      <img [src]="ninja" style="width: 100%" />
+    </ng-template>
+  </div>
 </div>
 
 <div class="ninja-detail" [class.active]="showNinjaDetail" *ngIf="ninjaSelected">
-    <div class="ninja-detail-card">
-        <h1> {{ ninjaSelected.name }} </h1>
-        <p> {{ ninjaSelected.phrase }} </p>
-        <button (click)="toggleNinjaDetail()">Close</button>
-    </div>
+  <div class="ninja-detail-card">
+    <h1>{{ ninjaSelected.name }}</h1>
+    <p>{{ ninjaSelected.phrase }}</p>
+    <button (click)="toggleNinjaDetail()">Close</button>
+  </div>
 </div>

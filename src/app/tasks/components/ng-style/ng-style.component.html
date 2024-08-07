@@ -1,20 +1,24 @@
 <!-- NgStyle es una directiva que permite establecer las propiedades de estilo de un elemento DOM determinado. -->
 
 <h1>NgStyle</h1>
-<hr>
+<hr />
 
 <button (click)="changeStyle()">Cambiar color con ngStyle</button>
 
-<div class="container-style" [ngStyle]="{'background-color': property ? 'green' : 'red'}">
-    ngStyle - {{ property }}
+<div class="container-style" [ngStyle]="{ 'background-color': property ? 'green' : 'red' }">
+  ngStyle - {{ property }}
 </div>
 
-<hr>
+<hr />
 
-<button [ngStyle]="{ 'background-color': 'blue', 'border': 0, 'color': '#FFFFFF', 'padding': '10px' }" (click)="changeClass()">Cambiar color con class.active</button>
+<button
+  [ngStyle]="{ 'background-color': 'blue', border: 0, color: '#FFFFFF', padding: '10px' }"
+  (click)="changeClass()">
+  Cambiar color con class.active
+</button>
 
 <div [style.margin-top.px]="10" [style.margin-bottom.px]="10" class="classActive" [class.active]="propertyClass">
-    {{ propertyClass ? 'class.active' : 'class.inactive' }}
+  {{ propertyClass ? 'class.active' : 'class.inactive' }}
 </div>
 
-<hr>
+<hr />

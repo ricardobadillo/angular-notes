@@ -4,17 +4,15 @@ import { BehaviorSubject } from 'rxjs';
 
 import { Ninja, NinjaDTO } from '../interfaces/ninja';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NinjasService {
-
-  private counter = new BehaviorSubject<Ninja[]>([]); 
+  private counter = new BehaviorSubject<Ninja[]>([]);
   counter$ = this.counter.asObservable();
   ninjas: Ninja[] = [];
-  
-  constructor( private http: HttpClient) { }
+
+  constructor(private http: HttpClient) {}
 
   getNinjas() {
     return this.http.get<Ninja[]>('http://localhost:3000/ninjas');
@@ -38,7 +36,7 @@ export class NinjasService {
 
   getNinjaByPages(limit: number, offset: number) {
     return this.http.get<Ninja[]>(`http://localhost:3000/ninjas`, {
-      params: { limit, offset }
+      params: { limit, offset },
     });
   }
 

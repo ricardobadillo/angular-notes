@@ -3,16 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
-  styleUrls: ['./events.component.scss']
+  styleUrls: ['./events.component.scss'],
 })
 export class EventsComponent {
-
   inputValueBlur: string = '';
   inputValueFocus: string = '';
   messageScroll: string = '';
   imgLink: string = 'https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png';
 
-  constructor() { }
+  constructor() {}
 
   onClick() {
     console.log('Has clickeado');
