@@ -1,0 +1,43 @@
+.context-container {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.template-container {
+  display: grid;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.framework-information {
+  background-color: #d3d3d3;
+  padding: 0.5rem 1rem;
+}
+
+b {
+  margin-right: 0.25rem;
+}
+
+.first-template {
+  margin-bottom: 3rem;
+}
+
+ul {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  border: 1px solid #d3d3d3;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #d3d3d3;
+  }
+}

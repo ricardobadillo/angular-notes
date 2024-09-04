@@ -12,12 +12,10 @@ import { TimeInterceptor } from './rxjs/interceptor/time.interceptor';
 
 // Módulos.
 import { AppRoutingModule } from './app-routing.module';
-import { TasksModule } from './tasks/tasks.module';
-import { LazyServiceComponent } from './kit/utility/lazy-service/lazy-service.component';
 
 @NgModule({
-  declarations: [AppComponent, LazyServiceComponent],
-  imports: [BrowserAnimationsModule, BrowserModule, HttpClientModule, AppRoutingModule, TasksModule],
+  declarations: [AppComponent],
+  imports: [BrowserAnimationsModule, BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

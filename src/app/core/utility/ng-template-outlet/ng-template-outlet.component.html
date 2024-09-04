@@ -1,0 +1,68 @@
+<!-- Segundo ejemplo -->
+<ng-template #templateRef let-label="label" let-url="url">
+  <div>
+    <a [href]="url">{{ label }}</a>
+  </div>
+</ng-template>
+
+<ng-template #templateRef2 let-label="label" let-url="url">
+  <div class="framework-information">
+    <p><b>Name:</b> {{ label }}</p>
+    <p>
+      <b>Url:</b> <a [href]="url">{{ label }}</a>
+    </p>
+  </div>
+</ng-template>
+
+<div class="first-template">
+  <p>
+    <button (click)="default = !default">Change template</button>
+  </p>
+
+  <div class="template-container">
+    <div [ngTemplateOutlet]="default ? templateRef : templateRef2" [ngTemplateOutletContext]="menu[0]"></div>
+    <div [ngTemplateOutlet]="default ? templateRef : templateRef2" [ngTemplateOutletContext]="menu[1]"></div>
+    <div [ngTemplateOutlet]="default ? templateRef : templateRef2" [ngTemplateOutletContext]="menu[2]"></div>
+  </div>
+
+  <p [style.margin]="0">Or with <code>*ngTemplateOutlet</code></p>
+  <hr />
+
+  <div class="template-container">
+    <div *ngTemplateOutlet="templateRef; context: menu[0]"></div>
+    <div *ngTemplateOutlet="templateRef; context: menu[1]"></div>
+    <div *ngTemplateOutlet="templateRef; context: menu[2]"></div>
+  </div>
+</div>
+
+<div class="second-template">
+  <h2>TemplateRef</h2>
+  <hr />
+
+  <app-list [list]="list" #wrapper (itemAdd)="addNewItem()">
+    <ng-template>
+      <ul>
+        <li *ngFor="let item of list; let i = index">
+          {{ item }}
+          <button (click)="wrapper.removeItem(i)">&times;</button>
+        </li>
+      </ul>
+    </ng-template>
+  </app-list>
+</div>
+
+<menu>
+  <ng-template>
+    <app-sub-menu [label]="menu[1].label"></app-sub-menu>
+    <app-sub-menu [label]="menu[0].label"></app-sub-menu>
+  </ng-template>
+</menu>
+
+<menu>
+  <ng-template>
+    <ul>
+      <li>111</li>
+      <li>2222</li>
+    </ul>
+  </ng-template>
+</menu>
